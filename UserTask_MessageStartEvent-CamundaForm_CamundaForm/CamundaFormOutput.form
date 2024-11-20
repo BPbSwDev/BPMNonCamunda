@@ -1,0 +1,46 @@
+{
+  "components": [
+    {
+      "text": "# Visualice los datos ingresados",
+      "type": "text",
+      "layout": {
+        "row": "Row_1syat1j",
+        "columns": null
+      },
+      "id": "Field_0amr3lp"
+    },
+    {
+      "label": "Nombre ingresado",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_16nd7sf",
+        "columns": null
+      },
+      "id": "Field_0pzst22",
+      "key": "Nombre",
+      "defaultValue": "${Nombre}",
+      "disabled": true
+    },
+    {
+      "label": "Ciudad ingresada",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_1x8nuzi",
+        "columns": null
+      },
+      "id": "Field_09ycle9",
+      "key": "Ciudad",
+      "defaultValue": "${Ciudad}",
+      "disabled": true
+    }
+  ],
+  "type": "default",
+  "id": "CamundaFormOutput",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.10.0"
+  },
+  "executionPlatform": "Camunda Platform",
+  "executionPlatformVersion": "7.19.0",
+  "schemaVersion": 8
+}

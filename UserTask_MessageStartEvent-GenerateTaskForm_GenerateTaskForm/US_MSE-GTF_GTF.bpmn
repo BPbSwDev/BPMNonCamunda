@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:modeler="http://camunda.org/schema/modeler/1.0" id="Definitions_02gl3n7" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="5.10.0" modeler:executionPlatform="Camunda Platform" modeler:executionPlatformVersion="7.19.0">
+  <bpmn:process id="UserTask_MessageStartEvent-GenerateTaskForm_GenerateTaskForm" name="UserTask_MessageStartEvent-GenerateTaskForm_GenerateTaskForm" isExecutable="true" camunda:historyTimeToLive="1">
+    <bpmn:sequenceFlow id="Flow_1pt6ext" sourceRef="StartEvent_1" targetRef="Activity_0bto7hk" />
+    <bpmn:startEvent id="StartEvent_1" name="Ingresar datos">
+      <bpmn:extensionElements>
+        <camunda:formData>
+          <camunda:formField id="Nombre" label="Ingrese su nombre" type="string" />
+          <camunda:formField id="Ciudad" label="Ingrese su ciudad" type="string" />
+        </camunda:formData>
+      </bpmn:extensionElements>
+      <bpmn:outgoing>Flow_1pt6ext</bpmn:outgoing>
+      <bpmn:messageEventDefinition id="MessageEventDefinition_1myvlgz" messageRef="Message_2kr80jd" />
+    </bpmn:startEvent>
+    <bpmn:userTask id="Activity_0bto7hk" name="Mostrar datos">
+      <bpmn:extensionElements>
+        <camunda:formData>
+          <camunda:formField id="Nombre" label="Ingrese su nombre!" type="string" defaultValue="${Nombre}">
+            <camunda:properties />
+            <camunda:validation />
+          </camunda:formField>
+          <camunda:formField id="Ciudad" label="Seleccione su ciudad!" type="string" defaultValue="${Ciudad}" />
+        </camunda:formData>
+      </bpmn:extensionElements>
+      <bpmn:incoming>Flow_1pt6ext</bpmn:incoming>
+      <bpmn:outgoing>Flow_0sug4n6</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:sequenceFlow id="Flow_0sug4n6" sourceRef="Activity_0bto7hk" targetRef="Event_1cq56lr" />
+    <bpmn:endEvent id="Event_1cq56lr" name="Fin">
+      <bpmn:incoming>Flow_0sug4n6</bpmn:incoming>
+    </bpmn:endEvent>
+  </bpmn:process>
+  <bpmn:message id="Message_2kr80jd" name="MSE-GTF_GTF" />
+  <bpmndi:BPMNDiagram id="BPMNDiagram_1">
+    <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="UserTask_MessageStartEvent-GenerateTaskForm_GenerateTaskForm">
+      <bpmndi:BPMNShape id="Event_16nhbpt_di" bpmnElement="StartEvent_1">
+        <dc:Bounds x="172" y="102" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="155" y="145" width="71" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0wjk2gz_di" bpmnElement="Activity_0bto7hk">
+        <dc:Bounds x="260" y="80" width="100" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_03xvlxx_di" bpmnElement="Event_1cq56lr">
+        <dc:Bounds x="412" y="102" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="422" y="145" width="16" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="Flow_1pt6ext_di" bpmnElement="Flow_1pt6ext">
+        <di:waypoint x="208" y="120" />
+        <di:waypoint x="260" y="120" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0sug4n6_di" bpmnElement="Flow_0sug4n6">
+        <di:waypoint x="360" y="120" />
+        <di:waypoint x="412" y="120" />
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>
