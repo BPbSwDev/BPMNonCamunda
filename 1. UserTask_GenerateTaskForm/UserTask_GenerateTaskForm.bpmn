@@ -1,34 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:modeler="http://camunda.org/schema/modeler/1.0" id="Definitions_0h5zq4m" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="5.27.0" modeler:executionPlatform="Camunda Platform" modeler:executionPlatformVersion="7.19.0">
   <bpmn:process id="UserTask_GenerateTaskForm" name="UserTask_GenerateTaskForm" isExecutable="true" camunda:historyTimeToLive="1">
-    <bpmn:startEvent id="StartEvent_1" name="Inicio">
-      <bpmn:outgoing>Flow_16l6wbu</bpmn:outgoing>
-    </bpmn:startEvent>
-    <bpmn:sequenceFlow id="Flow_16l6wbu" sourceRef="StartEvent_1" targetRef="Activity_0bto7hk" />
-    <bpmn:sequenceFlow id="Flow_0ahhzpz" sourceRef="Activity_0bto7hk" targetRef="Activity_19j8o4t" />
-    <bpmn:endEvent id="Event_0d85wns" name="Fin">
-      <bpmn:incoming>Flow_1npodja</bpmn:incoming>
-    </bpmn:endEvent>
-    <bpmn:sequenceFlow id="Flow_1npodja" sourceRef="Activity_19j8o4t" targetRef="Event_0d85wns" />
-    <bpmn:userTask id="Activity_0bto7hk" name="Ingresar datos">
-      <bpmn:extensionElements>
-        <camunda:formData>
-          <camunda:formField id="Nombre" label="Ingrese su nombre!" type="string">
-            <camunda:properties />
-            <camunda:validation />
-          </camunda:formField>
-          <camunda:formField id="Ciudad" label="Seleccione su ciudad!" type="enum">
-            <camunda:value id="Villavicencio" name="Villavicencio" />
-            <camunda:value id="Bogota" name="Bogota" />
-            <camunda:value id="Villanueva" name="Villanueva" />
-            <camunda:value id="CastillaLaNueva" name="Castilla La Nueva" />
-            <camunda:value id="Cucuta" name="Cucuta" />
-          </camunda:formField>
-        </camunda:formData>
-      </bpmn:extensionElements>
-      <bpmn:incoming>Flow_16l6wbu</bpmn:incoming>
-      <bpmn:outgoing>Flow_0ahhzpz</bpmn:outgoing>
-    </bpmn:userTask>
     <bpmn:userTask id="Activity_19j8o4t" name="Mostrar datos">
       <bpmn:extensionElements>
         <camunda:formData>
@@ -39,6 +11,34 @@
       <bpmn:incoming>Flow_0ahhzpz</bpmn:incoming>
       <bpmn:outgoing>Flow_1npodja</bpmn:outgoing>
     </bpmn:userTask>
+    <bpmn:userTask id="Activity_0bto7hk" name="Ingresar datos">
+      <bpmn:extensionElements>
+        <camunda:formData>
+          <camunda:formField id="Nombre" label="Ingrese su nombre!" type="string">
+            <camunda:properties />
+            <camunda:validation />
+          </camunda:formField>
+          <camunda:formField id="Ciudad" label="Seleccione su ciudad!" type="enum">
+            <camunda:value id="Villavicencio" name="Villavicencio" />
+            <camunda:value id="Bogota" name="Bogotá" />
+            <camunda:value id="Villanueva" name="Villanueva" />
+            <camunda:value id="CastillaLaNueva" name="Castilla La Nueva" />
+            <camunda:value id="Cucuta" name="Cucuta" />
+          </camunda:formField>
+        </camunda:formData>
+      </bpmn:extensionElements>
+      <bpmn:incoming>Flow_16l6wbu</bpmn:incoming>
+      <bpmn:outgoing>Flow_0ahhzpz</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:sequenceFlow id="Flow_0ahhzpz" sourceRef="Activity_0bto7hk" targetRef="Activity_19j8o4t" />
+    <bpmn:endEvent id="Event_0d85wns" name="Fin">
+      <bpmn:incoming>Flow_1npodja</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:sequenceFlow id="Flow_1npodja" sourceRef="Activity_19j8o4t" targetRef="Event_0d85wns" />
+    <bpmn:startEvent id="StartEvent_1" name="Inicio">
+      <bpmn:outgoing>Flow_16l6wbu</bpmn:outgoing>
+    </bpmn:startEvent>
+    <bpmn:sequenceFlow id="Flow_16l6wbu" sourceRef="StartEvent_1" targetRef="Activity_0bto7hk" />
   </bpmn:process>
   <bpmndi:BPMNDiagram id="BPMNDiagram_1">
     <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="UserTask_GenerateTaskForm">
