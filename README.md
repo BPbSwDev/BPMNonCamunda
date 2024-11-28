@@ -10,35 +10,36 @@ BPM implementations on the Camunda Engine (and the Camunda Modeller) using the B
 
 ## Description
 
-The applications created in this implementation were developed using the Java programming language.
-
-[Java](https://www.java.com/es/) is a versatile and widely used programming language known for its platform independence, robustness, and scalability. With its rich ecosystem of libraries and frameworks, Java enables developers to build complex enterprise-grade applications efficiently and reliably.
-
-[Camunda Modeler](https://camunda.com/download/modeler/) is a desktop application that provides a graphical user interface for designing BPMN and DMN diagrams. It allows users to visually model their business processes and decision tables using drag-and-drop elements, making it easy to create, edit, and analyze process models.
-
-[Camunda Run](https://camunda.com/download/platform-7/) is a lightweight, out-of-the-box distribution of the Camunda BPM process engine, designed to facilitate the implementation and execution of BPMN (Business Process Model and Notation) and DMN (Decision Model and Notation) based processes and decisions.
+Business process implementations are carried out using the Camunda engine, together with the modeler offered by this tool. The main purpose of these implementations is to serve as an educational resource, with the objective of providing a practical and theoretical understanding of process automation. However, they are also adaptable and applicable for graduate programs, where they seek to deepen the analysis and advanced design of business processes, fostering the development of specialized competencies in process management.
 
 ## Prerequisites
 
 ### Environment
 
-To use this program you need the following:
+To use any implementation you need the following:
 
-1. **Java 21**: You can get help to download and install the java version by following [this link](https://www.youtube.com/watch?v=oAin-q1oTDw&pp=ygUXY29tbyBjb25maWd1cmFyIGphdmEgMTc%3D)
+1. **Java 21**: is a versatile and widely used programming language known for its platform independence, robustness, and scalability. With its rich ecosystem of libraries and frameworks, Java enables developers to build complex enterprise-grade applications efficiently and reliably. [this link](https://www.youtube.com/watch?v=oAin-q1oTDw&pp=ygUXY29tbyBjb25maWd1cmFyIGphdmEgMTc%3D)
 
-2. **Camunda Modeler**: you can download to install Camunda Modeler here [official website](https://camunda.com/download/modeler/)
+2. **Camunda Modeler**: is a desktop application that provides a graphical user interface for designing BPMN and DMN diagrams. It allows users to visually model their business processes and decision tables using drag-and-drop elements, making it easy to create, edit, and analyze process models. [official website](https://camunda.com/download/modeler/)
+    ![comando de ejecucion](Img/DownloadModeler.png)
 
-3. **Camunda Run**: you can download to execute Camunda Run here [official website](https://camunda.com/download/platform-7/)
+3. **Camunda Run**: is a lightweight, out-of-the-box distribution of the Camunda BPM process engine, designed to facilitate the implementation and execution of BPMN (Business Process Model and Notation) and DMN (Decision Model and Notation) based processes and decisions. [official website](https://camunda.com/download/platform-7/)
+    ![comando de ejecucion](Img/DownloadRun.png)
 
 ## Tool Usage
 
 To use and deploy any implementation you must:
 
-1. Open the folder ```camunda run``` and execute the field ```start.bat```. 
-    ![comando de ejecucion](Img/CamundaRun.png)
-
 2. Open any implementation with the ```camunda modeler```.
-   ![comando de ejecucion](Img/OpenCamunda.png)
+    ![comando de ejecucion](Img/OpenWith.png)
+    ![comando de ejecucion](Img/Select.png)
+    ![comando de ejecucion](Img/SelectCamunda.png)
+    ![comando de ejecucion](Img/OpenWithCamunda.png)
+    ![comando de ejecucion](Img/OpenCamunda.png)
+
+1. Open the folder ```camunda run``` and execute the field ```start.bat```. 
+    ![comando de ejecucion](Img/Run.png)
+    ![comando de ejecucion](Img/CamundaRun.png)
 
 3. Deploy the BPMN, do not forget to add the FORMs or DMNs required by the model.
     ![comando de ejecucion](Img/DeployBPMN.png)
